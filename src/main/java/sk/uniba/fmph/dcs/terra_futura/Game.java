@@ -237,6 +237,10 @@ public class Game implements TerraFuturaInterface {
     public boolean turnFinished(int playerId) {
         ensurePlayerOnTurn(playerId);
         ensureState(GameState.ActivateCard);
+
+        Player player = getPlayerById(playerId);
+        player.grid.endTurn();
+
         if(turnNumber < 10){
             if(onTurn < players.length - 1){
                 onTurn++;
