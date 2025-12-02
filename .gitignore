@@ -1,2 +1,4 @@
 target
 .Makefile.swp
+.idea
+*.iml
